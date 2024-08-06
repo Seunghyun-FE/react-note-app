@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { NavLink, useLocation } from "react-router-dom";
-import { useAppDispatch, useAppSelector } from "../../hooks/redux";
+import { useAppSelector } from "../../hooks/redux";
 import { Container, ItemsBox, MainBox, StyledLogo } from "./Sidebar.styles";
 import { toggleMenu } from "../../store/menu/menuSlice";
 import { FaArchive, FaLightbulb, FaTag, FaTrash } from "react-icons/fa";
