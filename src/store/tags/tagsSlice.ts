@@ -10,8 +10,8 @@ import { v4 } from "uuid";
 
 const initialState = {
   tagsList: [
-    { tag: "learnings", id: v4() }, //아이디 지정 또는 랜덤 아이디 생성(crypto)
-    { tag: "work", id: v4() },
+    { tag: "coding", id: v4() }, //아이디 지정 또는 랜덤 아이디 생성(crypto)
+    { tag: "exercise", id: v4() },
     { tag: "quotes", id: v4() },
   ],
 };
