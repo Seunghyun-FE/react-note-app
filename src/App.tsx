@@ -8,6 +8,7 @@ import {
   TagNotes,
   TrashNotes,
 } from "./pages";
+import { Navbar } from "./layout";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <BrowserRouter>
         <Sidebar />
         <div className="app__container">
+          <Navbar />
           <Routes>
             <Route path="/" element={<AllNotes />} />
             <Route path="/archive" element={<ArchiveNotes />} />

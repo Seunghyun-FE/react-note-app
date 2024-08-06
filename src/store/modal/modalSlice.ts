@@ -4,20 +4,40 @@ interface ModalState {
   viewEditTagsModal: boolean;
   viewAddTagsModal: boolean;
   viewCreateTagsModal: boolean;
-  viewFilterTagsModal: boolean;
+  viewFiltersModal: boolean;
 }
 
 const initialState: ModalState = {
   viewEditTagsModal: false,
   viewAddTagsModal: false,
   viewCreateTagsModal: false,
-  viewFilterTagsModal: false,
+  viewFiltersModal: false,
 };
 
 const modalSlice = createSlice({
   name: "modal",
   initialState,
-  reducers: {},
+  reducers: {
+    toggleTagsModal: (state, { payload }) => {
+      const { type, view } = payload;
+
+      if (type === "add") {
+        state.viewAddTagsModal = view;
+      } else {
+        state.viewEditTagsModal = view;
+      }
+    },
+
+    toggleCreateNoteModal: (state, action) => {
+      state.viewCreateTagsModal = action.payload;
+    },
+    toggleFiltersModal: (state, action) => {
+      state.viewFiltersModal = action.payload;
+    },
+  },
 });
+
+export const { toggleTagsModal, toggleCreateNoteModal, toggleFiltersModal } =
+  modalSlice.actions;
 
 export default modalSlice.reducer;
