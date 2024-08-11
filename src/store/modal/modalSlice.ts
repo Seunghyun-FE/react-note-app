@@ -3,14 +3,14 @@ import { createSlice } from "@reduxjs/toolkit";
 interface ModalState {
   viewEditTagsModal: boolean;
   viewAddTagsModal: boolean;
-  viewCreateTagsModal: boolean;
+  viewCreateNoteModal: boolean;
   viewFiltersModal: boolean;
 }
 
 const initialState: ModalState = {
   viewEditTagsModal: false,
   viewAddTagsModal: false,
-  viewCreateTagsModal: false,
+  viewCreateNoteModal: false,
   viewFiltersModal: false,
 };
 
@@ -29,7 +29,7 @@ const modalSlice = createSlice({
     },
 
     toggleCreateNoteModal: (state, action) => {
-      state.viewCreateTagsModal = action.payload;
+      state.viewCreateNoteModal = action.payload;
     },
     toggleFiltersModal: (state, action) => {
       state.viewFiltersModal = action.payload;

@@ -9,16 +9,19 @@ import {
   TrashNotes,
 } from "./pages";
 import { Navbar } from "./layout";
-import { TagsModal } from "./components";
+import { CreateNoteModal, TagsModal } from "./components";
 import { useAppSelector } from "./hooks/redux";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
-  const { viewEditTagsModal } = useAppSelector((state) => state.modal);
+  const { viewEditTagsModal, viewCreateNoteModal } = useAppSelector(
+    (state) => state.modal
+  );
 
   return (
-    <div className="App">
+    <div className="app">
+      {viewCreateNoteModal && <CreateNoteModal />}
       {viewEditTagsModal && <TagsModal type="edit" />}
       <ToastContainer
         position="bottom-right"
