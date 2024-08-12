@@ -1,7 +1,20 @@
 import React from "react";
+import { useAppSelector } from "../../hooks/redux";
+import { Container, EmptyMsgBox } from "../../styles/styles";
+import { MainWrapper } from "../../components";
 
 const TrashNotes = () => {
-  return <div></div>;
+  const { trashNotes } = useAppSelector((state) => state.notesList);
+
+  return (
+    <Container>
+      {trashNotes.length === 0 ? (
+        <EmptyMsgBox>no notes</EmptyMsgBox>
+      ) : (
+        <MainWrapper notes={trashNotes} type="trash" />
+      )}
+    </Container>
+  );
 };
 
 export default TrashNotes;
