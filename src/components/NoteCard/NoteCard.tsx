@@ -34,7 +34,7 @@ const NoteCard = ({ note, type }: NoteCardProps) => {
           {type !== "archive" && type !== "trash" && (
             <NotesIconBox
               className="noteCard__pin"
-              onClick={() => dispatch(setPinnedNotes({ id c}))}
+              onClick={() => dispatch(setPinnedNotes({ id }))}
             >
               <BsFillPinFill style={{ color: isPinned ? "red" : "" }} />
             </NotesIconBox>
