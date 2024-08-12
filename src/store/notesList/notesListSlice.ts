@@ -76,7 +76,7 @@ const notesListSlice = createSlice({
       const setRead = (notes: noteType) => {
         state[notes] = state[notes].map((note: Note) =>
           note.id === id ? { ...note, isRead: !note.isRead } : note
-        );
+        ); //             note의 기본 속성은 놓고 isRead만 !로 토글(boolean타입이라 가능)
       };
       if (type === "archive") {
         setRead(noteType.archiveNotes);
