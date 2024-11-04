@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../../hooks/redux";
 import { DeleteBox, FixedContainer } from "../Modal.styles";
 import {

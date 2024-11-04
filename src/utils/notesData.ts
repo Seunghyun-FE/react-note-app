@@ -11,7 +11,7 @@ const notes = [
     isRead: false,
     date: "10/12/24 2.55 PM",
     createdTime: new Date("Sat Dec 10 2024 14:55:22").getTime(),
-    editedTiem: null,
+    editedTime: null,
     id: v4(),
   },
 
@@ -25,7 +25,7 @@ const notes = [
     isRead: false,
     date: "10/10/24 2.44 PM",
     createdTime: new Date("Sat Dec 10 2024 14:44:22").getTime(),
-    editedTiem: null,
+    editedTime: null,
     id: v4(),
   },
 ];

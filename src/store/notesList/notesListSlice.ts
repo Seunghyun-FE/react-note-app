@@ -9,18 +9,18 @@ interface NoteState {
   editNote: null | Note;
 }
 
-enum noteType {
-  mainNotes = "mainNotes",
-  archiveNotes = "archiveNotes",
-  trashNotes = "trashNotes",
-}
-
 const initialState: NoteState = {
   mainNotes: [...notes],
   archiveNotes: [],
   trashNotes: [],
   editNote: null,
 };
+
+enum noteType {
+  mainNotes = "mainNotes",
+  archiveNotes = "archiveNotes",
+  trashNotes = "trashNotes",
+}
 
 const notesListSlice = createSlice({
   name: "notesList",
